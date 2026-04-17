@@ -404,6 +404,7 @@
         </div>
     </div>
 @endforeach
+@include('footer')
 
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>

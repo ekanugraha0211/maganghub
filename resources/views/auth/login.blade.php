@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../assets/css/corporate-ui-dashboard.css?v=1.0.0">
 </head>
 
-<body class="bg-light-blue">
+<body style="background-color:grey;">
     <main class="d-flex align-items-center min-vh-100">
         <div class="container">
             <div class="row justify-content-center align-items-center ">

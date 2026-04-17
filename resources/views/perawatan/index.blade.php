@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,11 +18,19 @@
   <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.7/css/dataTables.dataTables.min.css">
-
+    <style>
+        table td, table th {
+            padding: 10px 15px; /* Tambahkan padding sesuai kebutuhan */
+        }
+        .btn:hover {
+            transform: scale(1.01);
+            transition: transform 0.2s;
+        }
+    </style>
 </head>
 
 <body class="">
@@ -442,6 +449,8 @@
             </div>
         </div>
     @endforeach
+
+    @include('footer')
 
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
