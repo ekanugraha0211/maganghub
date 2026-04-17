@@ -179,7 +179,7 @@
 
                                 <div class="form-group-file">
                                     <label for="foto">Foto Kendaraan</label>
-                                    <input type="file" class="form-control-file" id="foto" name="foto" accept="image/*">
+                                    <input type="file" class="form-control-file"  name="foto" accept="image/*">
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -246,7 +246,7 @@
                                     <label for="ketersediaan">Ketersediaan</label>
                                     <select class="form-control" id="ketersediaan" name="ketersediaan" required>
                                         <option value="tersedia" {{ $kendaraan->ketersediaan == 'tersedia' ? 'selected' : '' }}>Tersedia</option>
-                                        <option value="dipinjam" {{ $kendaraan->ketersediaan == 'tidak tersedia' ? 'selected' : '' }}>Tidak tersedia</option>
+                                        <option value="tidak tersedia" {{ $kendaraan->ketersediaan == 'tidak tersedia' ? 'selected' : '' }}>Tidak tersedia</option>
                                         <!-- <option value="perawatan" {{ $kendaraan->ketersediaan == 'perawatan' ? 'selected' : '' }}>Perawatan</option> -->
                                     </select>
                                 </div>
