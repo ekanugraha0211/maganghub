@@ -60,7 +60,7 @@
                                             </span>
                                         @elseif($peminjaman->status == 'dipinjam')
                                             <span class="badge badge-warning px-3 py-2">
-                                                Dipinjam
+                                                Dipinjam     {{ $peminjaman->nama_peminjam ?? '-'}}
                                             </span>
                                         @endif
                                     </td>

@@ -15,20 +15,13 @@ class DatabaseSeeder extends Seeder
     {
         // Tambahkan pengguna admin
         User::create([
-            'name' => 'Admin User',
-            'email' => 'admin@example.com',
-            'password' => ('password123'),
+            'name' => 'Simopas',
+            'email' => 'info@lapaspasuruan.id',
+            'password' => ('lapaspasuruan'),
             'role' => 'admin'
         ]);
 
         // Tambahkan pengguna operator
-        User::create([
-            'name' => 'Operator User',
-            'email' => 'operator@example.com',
-            'password' => ('password123'),
-            'role' => 'operator'
-        ]);
-
         // Jika ada seeders lain, panggil di sini
         // $this->call(SeederLain::class);
         $this->call([
