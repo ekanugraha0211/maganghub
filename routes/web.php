@@ -47,7 +47,7 @@ Route::get('/home', function () {
 */
 Route::get('/admin', [DashboardController::class, 'index'])->middleware('auth');
 // Route::get('/', [GuestDashboardController::class, 'index']);
-Route::get('/', [GuestDashboardController::class, 'index'])->name('home');
+Route::get('/', [GuestDashboardController::class, 'index'])->middleware('auth')->name('home');
 
 /*
 |--------------------------------------------------------------------------

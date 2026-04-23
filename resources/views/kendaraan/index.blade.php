@@ -105,6 +105,14 @@
                                                             <i class="fas fa-trash-alt"></i> <!-- Ikon trash-alt -->
                                                         </button>
                                                     </form>
+                                                    <a href="{{ route('guest.show', $kendaraan->id) }}">
+                                                        <button type="button" class="btn btn-blue btn-sm" >
+                                                            <i class="fas fa-eye"></i> <!-- Ikon trash-alt -->
+                                                        </button>
+                                                    </a>
+                                                    <form id="delete-form-{{ $kendaraan->id }}" action="{{ route('guest.show', $kendaraan->id) }}" method="POST" style="display:inline;">
+                                                        
+                                                    </form>
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -273,51 +281,51 @@
             </div>
             @endforeach
             <!-- Modal Detail Barang -->
-                    @foreach ($data as $kendaraan)
-                        <div class="modal fade" id="detailKendaraan{{ $kendaraan->id }}" tabindex="-1" role="dialog">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
+            @foreach ($data as $kendaraan)
+                <div class="modal fade" id="detailKendaraan{{ $kendaraan->id }}" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
 
-                                    <div class="modal-header">
-                                        <h5 class="modal-title"><strong>Detail Kendaraan</strong></h5>
-                                        <button type="button" class="close" data-dismiss="modal">
-                                            <span>&times;</span>
-                                        </button>
-                                    </div>
+                            <div class="modal-header">
+                                <h5 class="modal-title"><strong>Detail Kendaraan</strong></h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
 
-                                    <div class="modal-body">
-                                        <div class="text-center">
-                                            @if($kendaraan->foto)
-                                                <img src="{{ asset('images/' . $kendaraan->foto) }}"
-                                                    alt="Foto Kendaraan"
-                                                    class="img-fluid"
-                                                    style="max-height: 200px;">
-                                            @else
-                                                <p>Tidak ada foto</p>
-                                            @endif
-                                        </div>
+                            <div class="modal-body">
+                                <div class="text-center">
+                                    @if($kendaraan->foto)
+                                        <img src="{{ asset('images/' . $kendaraan->foto) }}"
+                                            alt="Foto Kendaraan"
+                                            class="img-fluid"
+                                            style="max-height: 200px;">
+                                    @else
+                                        <p>Tidak ada foto</p>
+                                    @endif
+                                </div>
 
-                                        <div class="mt-3">
-                                            <p><strong>Nama Kendaraan:</strong> {{ $kendaraan->nama }}</p>
-                                            <p><strong>Plat Nomor:</strong> {{ $kendaraan->plat_nomor }}</p>
-                                            <p><strong>Merek:</strong> {{ $kendaraan->merek }}</p>
-                                            <p><strong>Warna:</strong> {{ $kendaraan->warna }}</p>
-                                            <p><strong>Tahun:</strong> {{ $kendaraan->tahun }}</p>
-                                            <p><strong>Jenis BBM:</strong> {{ $kendaraan->jenis_bbm }}</p>
-                                            <p><strong>Ketersediaan:</strong> {{ $kendaraan->ketersediaan }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                            Tutup
-                                        </button>
-                                    </div>
-
+                                <div class="mt-3">
+                                    <p><strong>Nama Kendaraan:</strong> {{ $kendaraan->nama }}</p>
+                                    <p><strong>Plat Nomor:</strong> {{ $kendaraan->plat_nomor }}</p>
+                                    <p><strong>Merek:</strong> {{ $kendaraan->merek }}</p>
+                                    <p><strong>Warna:</strong> {{ $kendaraan->warna }}</p>
+                                    <p><strong>Tahun:</strong> {{ $kendaraan->tahun }}</p>
+                                    <p><strong>Jenis BBM:</strong> {{ $kendaraan->jenis_bbm }}</p>
+                                    <p><strong>Ketersediaan:</strong> {{ $kendaraan->ketersediaan }}</p>
                                 </div>
                             </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                    Tutup
+                                </button>
+                            </div>
+
                         </div>
-                    @endforeach
+                    </div>
+                </div>
+            @endforeach
                 <!-- </div>
             </div> -->
 
